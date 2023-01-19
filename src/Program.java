@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
-        System.out.println("Здравствуйте!");
+        System.out.println("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ!");
         startProgram();
     }
 
     static void startProgram() {
-        System.out.println("Введите номер программы (1-4), либо введите \"Q\" для выхода.");
+        System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСЂРѕРіСЂР°РјРјС‹ (1-4), Р»РёР±Рѕ РІРІРµРґРёС‚Рµ \"Q\" РґР»СЏ РІС‹С…РѕРґР°.");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Программа № ");
+        System.out.print("РџСЂРѕРіСЂР°РјРјР° в„– ");
         String program = scanner.nextLine();
         if (program.equalsIgnoreCase("q")) {
-            System.out.println("До свидания!");
+            System.out.println("Р”Рѕ СЃРІРёРґР°РЅРёСЏ!");
         } else if (program.chars().allMatch(Character::isDigit)) {
             switch (program) {
                 case "1" -> ex0();
@@ -24,21 +24,21 @@ public class Program {
                 case "4" -> ex3();
                 case "5" -> ex4();
                 default -> {
-                    System.out.println("Введен некорректный номер, пожалуйста, попробуйте еще раз.");
+                    System.out.println("Р’РІРµРґРµРЅ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РЅРѕРјРµСЂ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
                     startProgram();
                 }
             }
         } else {
-            System.out.println("Ввод некорректен, пожалуйста, попробуйте еще раз.");
+            System.out.println("Р’РІРѕРґ РЅРµРєРѕСЂСЂРµРєС‚РµРЅ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
             startProgram();
         }
     }
 
-    // Задача 1. Вычислить n-ое треугольного число(сумма чисел от 1 до n)
+    // Р—Р°РґР°С‡Р° 1. Р’С‹С‡РёСЃР»РёС‚СЊ n-РѕРµ С‚СЂРµСѓРіРѕР»СЊРЅРѕРіРѕ С‡РёСЃР»Рѕ(СЃСѓРјРјР° С‡РёСЃРµР» РѕС‚ 1 РґРѕ n)
     static void ex0() {
-        System.out.println("Введите число N:");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ N:");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Число N = ");
+        System.out.print("Р§РёСЃР»Рѕ N = ");
         String input = scanner.nextLine();
         if (input.chars().allMatch(Character::isDigit)) {
             int num = Integer.parseInt(input);
@@ -46,16 +46,16 @@ public class Program {
             for (int i = 1; i <= num; i++) {
                 sum += i;
             }
-            System.out.println("Сумма чисел от 1 до " + num + " = " + sum);
+            System.out.println("РЎСѓРјРјР° С‡РёСЃРµР» РѕС‚ 1 РґРѕ " + num + " = " + sum);
         }
         startProgram();
     }
 
-    // Задача 2. Вычислить n! (произведение чисел от 1 до n)
+    // Р—Р°РґР°С‡Р° 2. Р’С‹С‡РёСЃР»РёС‚СЊ n! (РїСЂРѕРёР·РІРµРґРµРЅРёРµ С‡РёСЃРµР» РѕС‚ 1 РґРѕ n)
     static void ex1() {
-        System.out.println("Введите число N:");
+        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ N:");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Число N = ");
+        System.out.print("Р§РёСЃР»Рѕ N = ");
         String input = scanner.nextLine();
         if (input.chars().allMatch(Character::isDigit)) {
             int num = Integer.parseInt(input);
@@ -63,12 +63,12 @@ public class Program {
             for (int i = 1; i <= num; i++) {
                 mult *= i;
             }
-            System.out.println("Произведение чисел (n!) от 1 до " + num + " = " + mult);
+            System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ С‡РёСЃРµР» (n!) РѕС‚ 1 РґРѕ " + num + " = " + mult);
         }
         startProgram();
     }
 
-    // Задача 2. Вывести все простые числа от 1 до 1000
+    // Р—Р°РґР°С‡Р° 2. Р’С‹РІРµСЃС‚Рё РІСЃРµ РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р° РѕС‚ 1 РґРѕ 1000
     static void ex2() {
         ArrayList<Integer> arr = new ArrayList<Integer>();
         for (int i = 2; i < 1000; i++) {
@@ -87,49 +87,49 @@ public class Program {
         startProgram();
     }
 
-    // Задача 3. Реализовать простой калькулятор
+    // Р—Р°РґР°С‡Р° 3. Р РµР°Р»РёР·РѕРІР°С‚СЊ РїСЂРѕСЃС‚РѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ
     static void ex3() {
         int firstNumber = 0;
         int secondNumber = 0;
         String symbol = "";
         int result = 0;
         while (true) {
-            System.out.println("Введите первое число:");
+            System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:");
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Первое число = ");
+            System.out.print("РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ = ");
             String input = scanner.nextLine();
             if (input.chars().allMatch(Character::isDigit)) {
                 firstNumber = Integer.parseInt(input);
                 break;
             } else {
-                System.out.println("Ввод некорректен, пожалуйста, попробуйте еще раз.");
+                System.out.println("Р’РІРѕРґ РЅРµРєРѕСЂСЂРµРєС‚РµРЅ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
             }
         }
 
         while (true) {
-            System.out.println("Введите второе число:");
+            System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:");
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Второе число = ");
+            System.out.print("Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ = ");
             String input = scanner.nextLine();
             if (input.chars().allMatch(Character::isDigit)) {
                 secondNumber = Integer.parseInt(input);
                 break;
             } else {
-                System.out.println("Ввод некорректен, пожалуйста, попробуйте еще раз.");
+                System.out.println("Р’РІРѕРґ РЅРµРєРѕСЂСЂРµРєС‚РµРЅ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
             }
         }
 
         while (true) {
-            System.out.println("Введите необходимое дейсвтие (+, -, * или /):");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґРµР№СЃРІС‚РёРµ (+, -, * РёР»Рё /):");
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Действие = ");
+            System.out.print("Р”РµР№СЃС‚РІРёРµ = ");
             String input = scanner.nextLine();
             if (Objects.equals(input, "+") || Objects.equals(input, "-")
                     || Objects.equals(input, "*") || Objects.equals(input, "/")) {
                 symbol = input;
                 break;
             } else {
-                System.out.println("Ввод некорректен, пожалуйста, попробуйте еще раз.");
+                System.out.println("Р’РІРѕРґ РЅРµРєРѕСЂСЂРµРєС‚РµРЅ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
             }
         }
 
@@ -141,22 +141,22 @@ public class Program {
                 if (secondNumber != 0) {
                     result = firstNumber / secondNumber;
                 } else {
-                    System.out.println("На 0 делить нельзя!");
+                    System.out.println("РќР° 0 РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ!");
                 }
             }
         }
-        System.out.println("Результат вычисления " + firstNumber + " " + symbol + " " + secondNumber + " = " + result);
+        System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ " + firstNumber + " " + symbol + " " + secondNumber + " = " + result);
     }
 
-    /* Задача 4. *+Задано уравнение вида q + w = е, q, w, e >= 0. Некоторые цифры могут быть заменены знаком вопроса,
-     * например 2? + ?5 = 69. Требуется восстановить выражение до верного равенства.
-     * Предложить хотя бы одно решение или сообщить, что его нет.
+    /* Р—Р°РґР°С‡Р° 4. *+Р—Р°РґР°РЅРѕ СѓСЂР°РІРЅРµРЅРёРµ РІРёРґР° q + w = Рµ, q, w, e >= 0. РќРµРєРѕС‚РѕСЂС‹Рµ С†РёС„СЂС‹ РјРѕРіСѓС‚ Р±С‹С‚СЊ Р·Р°РјРµРЅРµРЅС‹ Р·РЅР°РєРѕРј РІРѕРїСЂРѕСЃР°,
+     * РЅР°РїСЂРёРјРµСЂ 2? + ?5 = 69. РўСЂРµР±СѓРµС‚СЃСЏ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РІС‹СЂР°Р¶РµРЅРёРµ РґРѕ РІРµСЂРЅРѕРіРѕ СЂР°РІРµРЅСЃС‚РІР°.
+     * РџСЂРµРґР»РѕР¶РёС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕ СЂРµС€РµРЅРёРµ РёР»Рё СЃРѕРѕР±С‰РёС‚СЊ, С‡С‚Рѕ РµРіРѕ РЅРµС‚.
      */
     static void ex4() {
-        System.out.println("Введите пример без пробелов, заменив некоторые числа в X и Y " +
-                "знаками вопроса в формате (X?+?Y=ZZ):");
+        System.out.println("Р’РІРµРґРёС‚Рµ РїСЂРёРјРµСЂ Р±РµР· РїСЂРѕР±РµР»РѕРІ, Р·Р°РјРµРЅРёРІ РЅРµРєРѕС‚РѕСЂС‹Рµ С‡РёСЃР»Р° РІ X Рё Y " +
+                "Р·РЅР°РєР°РјРё РІРѕРїСЂРѕСЃР° РІ С„РѕСЂРјР°С‚Рµ (X?+?Y=ZZ):");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Выражение = ");
+        System.out.print("Р’С‹СЂР°Р¶РµРЅРёРµ = ");
         String text = scanner.nextLine();
         String leftSide = text.split("=")[0];
         String rightSide = text.split("=")[1];
@@ -176,13 +176,13 @@ public class Program {
             }
             if ((Integer.parseInt(a) + Integer.parseInt(b)) == Integer.parseInt(rightSide)) {
                 int c = (Integer.parseInt(a) + Integer.parseInt(b));
-                System.out.println("Решение уравнения: " + a + " + " + b + " = " + c);
+                System.out.println("Р РµС€РµРЅРёРµ СѓСЂР°РІРЅРµРЅРёСЏ: " + a + " + " + b + " = " + c);
                 isSolutionExist = true;
                 break;
             }
         }
         if (!isSolutionExist) {
-            System.out.println("Решений нет!");
+            System.out.println("Р РµС€РµРЅРёР№ РЅРµС‚!");
         }
         startProgram();
     }
